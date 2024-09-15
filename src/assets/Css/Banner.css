@@ -1,0 +1,163 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body, html {
+  font-family: 'Arial', sans-serif;
+  }
+  
+  .hero-banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  }
+  
+  .banner-img {
+      position: fixed; /* Ensure the image stays in place */
+      top: 60px; /* Adjust based on the navbar height */
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1; 
+  }
+  
+  .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .content {
+  color: white;
+  text-align: center;
+  }
+  
+  .content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  }
+  
+  .content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  }
+  
+  .search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap; 
+  }
+  
+  .search-box form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  }
+  
+  .search-field input,
+  .select-field select,
+  .search-btn {
+  padding: 30px;
+  outline: none;
+  min-width: 200px;
+  margin-bottom: 0; 
+  margin-right: 5px;
+  }
+  
+  .search-btn {
+  background-color: #FF6F61;
+  color: rgb(255, 255, 255);
+  padding: 30px 40px;
+  cursor: pointer;
+  border: none;
+  }
+  
+  .search-btn:hover {
+  background-color: #e65c4e;
+  }
+  
+  .content-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+  .content h1 {
+      font-size: 36px;
+  }
+  
+  .search-box {
+      flex-direction: column;
+      align-items: stretch; /* Ensure full-width fields */
+  }
+  
+  .search-field input,
+  .select-field select,
+  .search-btn {
+      width: 100%; /* Make inputs and buttons full-width on smaller screens */
+      margin-bottom: 10px; /* Add margin between stacked elements */
+  }
+  
+  .search-btn {
+      padding: 15px 20px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .content h1 {
+      font-size: 28px;
+  }
+  
+  .content p {
+      font-size: 16px;
+  }
+  
+  /* Adjust the stacking of the search fields and button */
+  .search-box form {
+      flex-direction: column; /* Stack fields and button vertically */
+  }
+  
+  .search-field input,
+  .select-field select,
+  .search-btn {
+      width: 100%; /* Ensure full width */
+      margin-bottom: 10px; /* Add space between items */
+  }
+  }
+  
+  
+  .search-field {
+      position: relative;
+    }
+    
+    .search-field input {
+      padding-right: 40px; /* Add padding to accommodate the icon */
+    }
+    
+    .search-field i {
+      position: absolute;
+      top: 50%;
+      right: 25px; /* Adjust as needed */
+      transform: translateY(-50%);
+      color: #857979; /* Or any color that matches your design */
+      font-size: 20px; /* Adjust size as needed */
+      pointer-events: none; /* Ensure the icon does not interfere with input */
+    }
+    
+  
+  
